@@ -28,23 +28,46 @@ body, html {
 
 
 
-/*stuff below is about positioning phone and screen, default button behavior, etc*/
+/*stuff below is about positioning phone and screen, default button behavior, etc
+should be same between all screens*/
 
 #phone-container {
 	position: relative;
 	margin: 0 auto;
 	top: 10px;
-	width: 360px;
+	width: 440px;
+	z-index: 1;
 }
 
 #screen-container {
 	position: absolute;
 	margin: 0 auto;
-	width: 297px;
-	height: 526px;
-	left: 31px;
-	top: 54px;
-	z-index: 100;
+	width: 363px;
+	height: 643px;
+	left: 37px;
+	top: 67px;
+	z-index: 3;
+/*	to change color of background, change background-color of #screen-background*/
+}
+
+#screen-background {
+	position: absolute;
+	margin: 0 auto;
+	width: 363px;
+	height: 643px;
+	left: 37px;
+	top: 67px;
+	z-index: 2;
+	background-color: #5BBDB0;
+/*	background-color: white;*/
+}
+
+#nav-bar {
+	position: absolute;
+	width: 363px;
+	height: 70px;
+	top: 573px;
+	background-color: #189786
 }
 
 img {
