@@ -6,22 +6,83 @@ body, html {
 	min-width: 960px;
 	background-color: white;
 	-webkit-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;
-	font-smoothing: antialiased;
 	font-family: Lato;
 }
 
 
+#map_map-box {
+	position: absolute;
+	width: 363px;
+	height: 573px;
+	margin: 0 auto;
+}
+
+#map_info {
+	position: absolute;
+	width: 363px;
+	height: 50px;
+	background-color: #5BBDB0;
+	background: rgba(91, 189, 176, 0.6);
+	z-index: 10;
+}
+
+#map_time {
+	position: absolute;
+	text-align: center;
+	top: 5px;
+	font-size: 30px;
+	color: white;
+	width: 130px;
+	height: 50px;
+}
+
+#map_dist {
+	position: absolute;
+	text-align: center;
+	left: 245px;
+	top: 5px;
+	font-size: 30px;
+	color: white;
+	width: 130px;
+	height: 50px;
+}
+
+/*	position: absolute;
+	width: 363px;
+	height: 50px;
+	background-color: #5485BB;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 5;*/
+
+#map_camera-box {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	left: 175px;
+	top: 9px;
+	color:white;
+}
+
+#map_stop {
+	position: absolute;
+	width: 120px;
+	height: 40px;
+	text-align: center;
+	font-size: 23px;
+	color: white;
+	background-color: #E61616; 
+	/*or #de6868*/
+	top: 507px;
+	right: 10px;
+}
+
+#map_stop-text {
+	position: absolute;
+	top: -17px;
+	left: 12px;
+}
 
 
-/*your css here*/
-/*your css here*/
-/*your css here*/
-/*your css here*/
-/*your css here*/
-/*your css here*/
-/*your css here*/
-/*your css here*/
 
 
 
@@ -37,6 +98,7 @@ should be same between all screens*/
 	top: 10px;
 	width: 440px;
 	z-index: 1;
+
 }
 
 #screen-container {
@@ -46,28 +108,67 @@ should be same between all screens*/
 	height: 643px;
 	left: 37px;
 	top: 67px;
-	z-index: 3;
-/*	to change color of background, change background-color of #screen-background*/
-}
-
-#screen-background {
-	position: absolute;
-	margin: 0 auto;
-	width: 363px;
-	height: 643px;
-	left: 37px;
-	top: 67px;
-	z-index: 2;
 	background-color: #5BBDB0;
 /*	background-color: white;*/
+	z-index: 2;
+}
+
+#status-bar {
+	position: absolute;
+	width: 364px;
+	height: 24px;
+}
+
+#editable-screen {
+	position: absolute;
+	width: 363px;
+	height: 559px;
+	top: 24px;
+	z-index 5;
 }
 
 #nav-bar {
 	position: absolute;
 	width: 363px;
-	height: 70px;
-	top: 573px;
+	height: 60px;
+	top: 584px;
 	background-color: #189786
+}
+
+#back-button {
+	position: absolute;
+	width: 20px;
+	height: 31.5px;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 15px;
+}
+
+#home-button {
+	position: absolute;
+	width: 34px;
+	height: 28.5px;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 110px;
+}
+
+#chat-button {
+	position: absolute;
+	width: 32px;
+	height: 30px;
+	top: 50%;
+	transform: translateY(-35%);
+	left: 215px;
+}
+
+#stats-button {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 310px;
 }
 
 img {
@@ -78,13 +179,6 @@ img {
 	position: relative;
 	margin: 0 auto;
 	cursor: pointer;
+	border-radius: 5px;
 }
-
-
-
-
-
-
-
-
 
