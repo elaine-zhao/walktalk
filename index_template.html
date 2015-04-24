@@ -13,33 +13,44 @@
     </head>
     
     <body>
+
         <div id="phone-container"> 
             <img src="assets/img/Nexus5.png">
-            <div id="screen-container"> 
+            <div id="screen-container">
+                <div id="status-bar"><img src="assets/img/StatusBar.png"></div> 
 
 
+                <div id="editable-screen"> 
+                  
                 GENERAL NOTES:
-                -only make changes within this "screen-container" div
+                -only make changes within this "editable-screen" div
+                -this is the actual space you get for content (accounts for phone status bar and nav bar)
                 -probably make divs position: absolute;
                 -if you think some of the default css styles should be changed, let the group know first?
                 -to avoid collisions with css, prefix id names (i.e. id="chat_picture" vs id="picture")
                 -nav bar should be worked on.
 
+                <!-- add extra content like buttons, other images here! -->
+                <!-- add extra content like buttons, other images here! -->
+                <!-- add extra content like buttons, other images here! -->
+                <!-- add extra content like buttons, other images here! -->
+                <!-- add extra content like buttons, other images here! -->
+                <!-- add extra content like buttons, other images here! -->
+                <!-- add extra content like buttons, other images here! -->
+                <!-- add extra content like buttons, other images here! --> 
 
-                <!-- add extra content like buttons, other images here! -->
-                <!-- add extra content like buttons, other images here! -->
-                <!-- add extra content like buttons, other images here! -->
-                <!-- add extra content like buttons, other images here! -->
-                <!-- add extra content like buttons, other images here! -->
-                <!-- add extra content like buttons, other images here! -->
-                <!-- add extra content like buttons, other images here! -->
-                <!-- add extra content like buttons, other images here! -->
+                </div>
 
 
-            </div>
-            <div id="screen-background">
-                <div id="nav-bar"></div>
+                <div id="nav-bar">
+                    <div class="button" id="back-button"><img src="assets/img/BackArrow.png"></div>
+                    <div class="button" id="home-button"><img src="assets/img/House.png"></div>
+                    <div class="button" id="chat-button"><img src="assets/img/Chat.png"></div>
+                    <div class="button" id="stats-button"><img src="assets/img/Stats.png"></div>
+                </div>
             </div>
         </div>
     </body>
 </html>
+
+
