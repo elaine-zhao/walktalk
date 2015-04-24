@@ -9,6 +9,90 @@ body, html {
 	font-family: Lato;
 }
 
+/*LOGIN SCREEN*/
+
+#logo-box {
+	position: relative;
+	margin: 0 auto;
+	width: 250px;
+	top: 40px;
+
+
+}
+
+.login-input {
+	position: absolute;
+	margin: 0 auto;
+	left: 50%;
+	transform: translateX(-50%);
+	background: transparent;
+	font-size: 18px;
+	border: 0px;
+	outline: none;
+	border-bottom: 2px solid white;
+	padding-bottom: 5px;
+}
+
+.login-input::-webkit-input-placeholder  {
+	color: white;
+	text-align: center;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+#username {
+	width: 240px;
+	top: 380px;
+}
+
+#password {
+	width: 240px;
+	top: 420px;
+}
+
+#forgot-password {
+	position: absolute;
+	color: white;
+	font-size: 13px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 105px;
+	height: 15px;
+	top: 455px;
+}
+
+#login-button {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 122px;
+	height: 35px;
+	top: 500px;
+	background-color: white;
+}
+
+#login-text {
+	position: relative;
+	width: 122px;
+	text-align: center;
+	font-size: 16px;
+	top: 8px;
+}
+
+#create-account {
+	width: 95px;
+	height: 20px;
+	top: 406px;
+}
+
+
+
+
+
+/*MAP SCREEN*/
+
 
 #map_map-box {
 	position: absolute;
@@ -124,7 +208,6 @@ should be same between all screens*/
 	width: 363px;
 	height: 559px;
 	top: 24px;
-	z-index 5;
 }
 
 #nav-bar {
