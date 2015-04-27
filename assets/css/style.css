@@ -22,15 +22,17 @@ body, html {
 
 .login-input {
 	position: absolute;
-	margin: 0 auto;
 	left: 50%;
 	transform: translateX(-50%);
+	margin: 0 auto;
+	padding: 5px 0 5px;
 	background: transparent;
 	font-size: 18px;
-	border: 0px;
+	border: 2px solid white;
+	border-radius: 5px;
 	outline: none;
-	border-bottom: 2px solid white;
-	padding-bottom: 5px;
+	text-align: center;
+	color: white;
 }
 
 .login-input::-webkit-input-placeholder  {
@@ -154,7 +156,7 @@ input:focus::-webkit-input-placeholder {
 	text-align: center;
 	font-size: 23px;
 	color: white;
-	background-color: #E61616; 
+	background-color: #E61616;
 	/*or #de6868*/
 	top: 507px;
 	right: 10px;
