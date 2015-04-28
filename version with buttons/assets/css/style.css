@@ -1,0 +1,478 @@
+
+body, html {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	min-width: 960px;
+	background-color: white;
+	-webkit-font-smoothing: antialiased;
+	font-family: Lato;
+}
+
+/*LOGIN SCREEN*/
+
+#logo-box {
+	position: relative;
+	margin: 0 auto;
+	width: 250px;
+	top: 40px;
+
+
+}
+
+.login-input {
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	margin: 0 auto;
+	padding: 5px 0 5px;
+	background: transparent;
+	font-size: 18px;
+	border: 2px solid white;
+	border-radius: 5px;
+	outline: none;
+	text-align: center;
+	color: white;
+}
+
+.login-input::-webkit-input-placeholder  {
+	color: white;
+	text-align: center;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+#username {
+	width: 240px;
+	top: 380px;
+}
+
+
+#password {
+	width: 240px;
+	top: 420px;
+}
+
+#forgot-password {
+	position: absolute;
+	color: white;
+	font-size: 13px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	width: 105px;
+	height: 15px;
+	top: 455px;
+}
+
+#login-button {
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	width: 122px;
+	height: 35px;
+	top: 500px;
+	background-color: white;
+}
+
+
+#login-text {
+	position: relative;
+	width: 122px;
+	text-align: center;
+	font-size: 16px;
+	top: 8px;
+}
+
+#create-account {
+	width: 95px;
+	height: 20px;
+	top: 406px;
+}
+
+
+
+
+
+/*MAP SCREEN*/
+
+.before-start {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 100;
+}
+
+.before-start > .button {
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #19D175;
+	top: 30%;
+	box-shadow: 3px 3px 5px black;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+
+#start-walking-text, #find-buddy-text {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-size: 30px;
+	color: white;
+}
+
+#find-buddy-button {
+	position: relative;
+	top: 200px;
+	background-color: #FFD07B;
+}
+
+
+#map_map-box {
+	position: absolute;
+	width: 363px;
+	height: 573px;
+	margin: 0 auto;
+}
+
+#map_info {
+	position: absolute;
+	width: 363px;
+	height: 50px;
+	background-color: #5BBDB0;
+	background: rgba(91, 189, 176, 0.6);
+	z-index: 10;
+}
+
+#map_time {
+	position: absolute;
+	text-align: center;
+	top: 5px;
+	font-size: 30px;
+	color: white;
+	width: 130px;
+	height: 50px;
+}
+
+#map_dist {
+	position: absolute;
+	text-align: center;
+	left: 245px;
+	top: 5px;
+	font-size: 30px;
+	color: white;
+	width: 130px;
+	height: 50px;
+}
+
+/*	position: absolute;
+	width: 363px;
+	height: 50px;
+	background-color: #5485BB;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 5;*/
+
+#map_camera-box {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	left: 175px;
+	top: 9px;
+	color:white;
+}
+
+#end-button {
+	position: absolute;
+	width: 120px;
+	height: 40px;
+	text-align: center;
+	font-size: 23px;
+	color: white;
+	background-color: #E61616;
+	/*or #de6868*/
+	top: 507px;
+	right: 10px;
+}
+
+#end-button-text {
+	position: absolute;
+	top: -17px;
+	left: 12px;
+}
+
+
+
+/*CHAT SCREEN*/
+#chat_top-bar {
+    height: 50px;
+    background-color: #5BBDB0;
+}
+
+
+
+#chat_top-bar-text {
+    text-align: center;
+    top: 8px;
+    position: relative;
+    font-size: 25px;
+    color: white;
+
+}
+
+#chat_messages-container {
+	position: relative;
+	height: calc(100% - 50px);
+
+}
+
+.chat_row {
+	position: relative;
+	width: 100%;
+	height: 100px;
+	top: 20px;
+
+}
+
+.chat_picture {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	overflow: hidden;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 15px;
+}
+
+.chat_picture#second {
+	left: 265px;
+}
+
+#first img, #third img{
+	width: 140%;
+}
+
+.chat_message{
+	position: absolute;
+	width: 200px;
+	height: 38px;
+	left: 105px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	border-radius: 20px;
+	padding: 5px;
+	background-color: #FFD07B;
+}
+
+.chat_message#second{
+	left: 40px;
+	background-color: #5BBDB0;
+}
+
+.chat_message-text {
+	position: relative;
+	margin: 0 auto;
+	font-size: 13px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 5px;
+}
+
+.chat_message-text#second {
+	color: white;
+}
+
+#chat_reply-container {
+	position: absolute;
+	top: 510px;
+}
+
+#chat_reply-outer {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	background-color: #E3E3E3;
+
+}
+
+#chat_reply {
+	position: absolute;
+	margin: 0 auto;
+	width: calc(100% - 40px);
+	top: 10px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	background: white;
+	font-size: 18px;
+	border: 2px solid white;
+	outline: none;
+	padding: 3px 0px;
+}
+
+
+
+
+
+
+
+/*stuff below is about positioning phone and screen, default button behavior, etc
+should be same between all screens*/
+
+#phone-container {
+	position: relative;
+	margin: 0 auto;
+	top: 10px;
+	width: 440px;
+	z-index: 1;
+
+}
+
+#screen-container {
+	position: absolute;
+	margin: 0 auto;
+	width: 363px;
+	height: 643px;
+	left: 37px;
+	top: 67px;
+	background-color: #5BBDB0;
+/*	background-color: white;*/
+	z-index: 2;
+}
+
+#screen-container-white {
+	position: absolute;
+	margin: 0 auto;
+	width: 363px;
+	height: 643px;
+	left: 37px;
+	top: 67px;
+	background-color: white;
+	z-index: 2;
+}
+
+#status-bar {
+	position: absolute;
+	width: 364px;
+	height: 24px;
+}
+
+#editable-screen {
+	position: absolute;
+	width: 363px;
+	height: 560px;
+	top: 24px;
+	overflow: hidden;
+}
+
+#nav-bar {
+	position: absolute;
+	width: 363px;
+	height: 60px;
+	top: 584px;
+	background-color: #189786
+}
+
+#back-button {
+	position: absolute;
+	width: 20px;
+	height: 31.5px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 15px;
+}
+
+#home-button {
+	position: absolute;
+	width: 34px;
+	height: 28.5px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 110px;
+}
+
+#chat-button {
+	position: absolute;
+	width: 32px;
+	height: 30px;
+	top: 50%;
+	-webkit-transform: translateY(-35%);
+	-moz-transform: translateY(-35%);
+	-o-transform: translateY(-35%);
+	transform: translateY(-35%);
+	left: 215px;
+}
+
+#stats-button {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 310px;
+}
+
+img {
+	width: 100%;
+}
+
+.button {
+	position: relative;
+	margin: 0 auto;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    width: 180px;
+    color: black;
+}
+
+
