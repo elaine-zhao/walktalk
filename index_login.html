@@ -9,7 +9,24 @@
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
         </script>
-        <script src = "assets/js/script.js"></script>
+        <script src="assets/js/script.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#login-button").on("click", function() {
+                    $("#login-editable-screen").hide("slow", function() {
+                        window.location = "index_onWalk.html"
+                    });/*.animate({
+                        "left": "-500px",
+                        "top": "-500px"
+                    }, {
+                        "duration": 500,
+                        "step": function() {
+                            console.log("stepping.");
+                        }
+                    });*/
+                });
+            });
+        </script>
     </head>
 
     <body>
@@ -19,7 +36,7 @@
             <div id="screen-container">
                 <div id="status-bar"><img src="assets/img/StatusBar.png"></div>
 
-                <div id="editable-screen">
+                <div id="login-editable-screen">
                     <div id="logo-box">
                         <img src="assets/img/Logo.png">
                     </div>
