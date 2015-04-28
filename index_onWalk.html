@@ -13,7 +13,6 @@
         <script type="text/javascript">
         $(document).ready(function() {
         $("#start-walking-button").on("click", function() {
-            console.log("walk triggered");
             var anim = function() {
                 function Vector2(x, y) {
                     this.x = x;
@@ -40,7 +39,7 @@
                     return m;
                 }
 
-                $("#walk-editable-screen").show("slow");
+                $("#walk_editable-screen").show("slow");
 
                 var img = document.getElementById("map-image");
                 var c = document.getElementById("cvas");
@@ -122,7 +121,9 @@
             <div id="screen-container">
                 <div id="status-bar"><img src="assets/img/StatusBar.png"></div>
 
-                <div id="editable-screen">
+                <!-- We need to keep the JS consistent, so don't forget to
+                     change the IDs on the container as well. -->
+                <div class="screen" id="walk_editable-screen">
 
                     <div class="before-start" id="before-start-cover">
                         <div class="button" id="start-walking-button">
