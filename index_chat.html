@@ -8,12 +8,10 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
-        </script> 
+        </script>
         <script src = "assets/js/script.js"></script>
 
-
-
-        <script> 
+        <script>
             $(document).ready(function() {
                 $("#chat_reply").click(function() {
                     if (!$("#chat_messages-container").hasClass("selected")) {
@@ -23,27 +21,36 @@
                         $(".chat_row#first").fadeTo("fast", 0);
                     }
                 });
+
+                $("#chat_messages-container").click(function() {
+                    if ($("#chat_messages-container").hasClass("selected")) {
+                        $("#chat_messages-container").removeClass("selected");
+                        $("#chat_messages-container").animate({top: "+=127px"});
+                        $("#chat_reply-container").animate({top: "+=275px"});
+                        $(".chat_row#first").css("zIndex", -1).fadeTo("fast", 1);
+                    }
+                });
             });
-            </script> 
+            </script>
     </head>
 
-    
+
     <body>
 
-        <div id="phone-container"> 
+        <div id="phone-container">
             <img src="assets/img/Nexus5.png">
             <div id="screen-container-white">
-                <div id="status-bar"><img src="assets/img/StatusBar.png"></div> 
+                <div id="status-bar"><img src="assets/img/StatusBar.png"></div>
 
 
-                <div id="editable-screen"> 
+                <div id="editable-screen">
                 	<div id="chat_top-bar">
                 		<div id="chat_top-bar-text">Chat with Oski Bear</div>
                 	</div>
 
 
                     <div id="chat_messages-container">
-                    	<div class="chat_row" id="first"> 
+                    	<div class="chat_row" id="first">
                     		<div class="chat_picture" id="first">
                     			<img src="assets/img/Oski.jpg">
                     		</div>
@@ -52,7 +59,7 @@
                     			</div>
                     		</div>
                     	</div>
-                    	<div class="chat_row" id="second"> 
+                    	<div class="chat_row" id="second">
                     		<div class="chat_picture" id="second">
                     			<img src="assets/img/elainezhao1.jpg">
                     		</div>
@@ -61,7 +68,7 @@
                     			</div>
                     		</div>
                     	</div>
-                    	<div class="chat_row" id="third"> 
+                    	<div class="chat_row" id="third">
                     		<div class="chat_picture" id="third">
                     			<img src="assets/img/Oski.jpg">
                     		</div>
@@ -80,7 +87,7 @@
                             <img src="assets/img/Keyboard.png">
                         </div>
                     </div>
-                 
+
 
 
 
@@ -90,7 +97,9 @@
                 <div id="nav-bar">
                     <div class="button" id="back-button"><img src="assets/img/BackArrow.png"></div>
                     <div class="button" id="home-button"><img src="assets/img/House.png"></div>
-                    <div class="button" id="chat-button"><img src="assets/img/Chat.png"></div>
+                    <div class="button active" id="chat-button">
+                        <img src="assets/img/Chat.png">
+                    </div>
                     <div class="button" id="stats-button"><img src="assets/img/Stats.png"></div>
                 </div>
             </div>
