@@ -10,7 +10,23 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
         </script> 
         <script src = "assets/js/script.js"></script>
+
+
+
+        <script> 
+            $(document).ready(function() {
+                $("#chat_reply").click(function() {
+                    if (!$("#chat_messages-container").hasClass("selected")) {
+                        $("#chat_messages-container").addClass("selected");
+                        $("#chat_messages-container").animate({top: "-=127px"});
+                        $("#chat_reply-container").animate({top: "-=275px"});
+                        $(".chat_row#first").fadeTo("fast", 0);
+                    }
+                });
+            });
+            </script> 
     </head>
+
     
     <body>
 
@@ -25,7 +41,8 @@
                 		<div id="chat_top-bar-text">Chat with Oski Bear</div>
                 	</div>
 
-                    <div id="chat_reply-screen-container">
+
+                    <div id="chat_messages-container">
                     	<div class="chat_row" id="first"> 
                     		<div class="chat_picture" id="first">
                     			<img src="assets/img/Oski.jpg">
@@ -53,17 +70,17 @@
                     			</div>
                     		</div>
                     	</div>
+                    </div>
 
-                        <div id="chat_reply-container">
-                            <div id="chat_reply-outer">
-                                <input type="text" id="chat_reply" placeholder="Reply"/>
-                            </div>
-                            <div id-"chat_keyboard">
-                                <img src="assets/img/Keyboard.png">
-                            </div>
-
+                    <div id="chat_reply-container">
+                        <div id="chat_reply-outer">
+                            <input type="text" id="chat_reply" placeholder="Reply"/>
+                        </div>
+                        <div id-"chat_keyboard">
+                            <img src="assets/img/Keyboard.png">
                         </div>
                     </div>
+                 
 
 
 

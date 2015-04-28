@@ -187,7 +187,7 @@ input:focus::-webkit-input-placeholder {
 
 }
 
-#chat_reply-screen-container {
+#chat_messages-container {
 	position: relative;
 	height: calc(100% - 50px);
 
@@ -251,8 +251,8 @@ input:focus::-webkit-input-placeholder {
 }
 
 #chat_reply-container {
-	position: relative;
-	top: 160px;
+	position: absolute;
+	top: 510px;
 }
 
 #chat_reply-outer {
@@ -279,6 +279,9 @@ input:focus::-webkit-input-placeholder {
 	padding: 3px 0px;
 }
 
+.selected {
+	
+}
 
 
 
