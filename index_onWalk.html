@@ -8,21 +8,92 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
-        </script> 
-        <script src = "assets/js/script.js"></script>
+        </script>
+        <script src="assets/js/script.js"></script>
+        <style type="text/css">
+            #map-image {
+                display: none;
+            }
+        </style>
+        <script src="assets/js/map_route.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                function Vector2(x, y) {
+                    this.x = x;
+                    this.y = y;
+                };
+
+                ROUTE = [
+                    new Vector2(250, 404),
+                    new Vector2(198, 107),
+                    new Vector2(15,  136),
+                    new Vector2(49,  336),
+                    new Vector2(232, 305),
+                    new Vector2(250, 404)
+                ];
+
+                SLOPE = function(a, b) {
+                    var m = (b.y - a.y) / (b.x - a.x);
+                    var i = 0;
+                    if (m > 1 && m < 1) {
+                        while (m < 1) m *= 2;
+                    } else if (m < 0 && m < -1) {
+                        while (m < -1) m *= 2;
+                    }
+                    return m;
+                }
+
+                $("#walk-editable-screen").show("slow");
+
+                var img = document.getElementById("map-image");
+                var c = document.getElementById("cvas");
+                var context = c.getContext("2d");
+                context.drawImage(img, 0, 0);
+                context.strokeStyle = "blue";
+
+                var idx = 1;
+                var pos = ROUTE[0];
+                var end = ROUTE[1];
+                var m = SLOPE(pos, end);
+
+                var i = setInterval(function() {
+                    if (idx >= ROUTE.length)
+                    {
+                        clearInterval(i);
+                        return;
+                    } else {
+                        context.rect(pos.x, pos.y, 2, 2);
+                        context.stroke();
+                        pos.y -= m;
+                        pos.x -= 1;
+
+                        console.log("drawing at", pos, end, "m=", m);
+
+                        if (pos.x == end.x && parseInt(pos.y) == end.y)
+                        {
+                            idx += 1;
+                            pos = end;
+                            end = ROUTE[idx];
+                            console.log("new point! from", pos, "to", end);
+                            m = SLOPE(pos, end);
+                        }
+                    }
+                }, 100);
+            });
+        </script>
     </head>
-    
+
     <body>
 
-        <div id="phone-container"> 
+        <div id="phone-container">
             <img src="assets/img/Nexus5.png">
 
             <div id="screen-container">
 
-                <div id="status-bar"><img src="assets/img/StatusBar.png"></div> 
+                <div id="status-bar"><img src="assets/img/StatusBar.png"></div>
 
 
-                <div id="editable-screen"> 
+                <div id="walk-editable-screen" style="display: none">
                     <div id="map_info">
                         <div id="map_time"> 0:00:30 </div>
                         <div class="button" id="map_camera-box">
@@ -32,13 +103,17 @@
                         <div id="map_dist"> 0.1 mi </div>
                     </div>
 
-                    <div id="map_map-box"><img src="assets/img/Map.png"></div>
+                    <div id="map_map-box">
+                        <canvas id="cvas" width="363" height="573">
+                        </canvas>
+                        <img id="map-image" src="assets/img/Map.png">
+                    </div>
 
                     <div class="button" id="map_stop">
                         <p id="map_stop-text"> End Walk </p>
                     </div>
                 </div>
-                
+
                 <div id="nav-bar">
                     <div class="button" id="back-button"><img src="assets/img/BackArrow.png"></div>
                     <div class="button" id="home-button"><img src="assets/img/House.png"></div>
@@ -48,9 +123,9 @@
 
             </div>
 
-            
-                
-                
+
+
+
             </div>
 
         </div>
