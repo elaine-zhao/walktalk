@@ -9,15 +9,12 @@
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
         </script>
-        <script src="assets/js/script.js"></script>
-        <style type="text/css">
-            #map-image {
-                display: none;
-            }
-        </style>
-        <script src="assets/js/map_route.js"></script>
+        <script src = "assets/js/script.js"></script>
         <script type="text/javascript">
-            $(document).ready(function() {
+        $(document).ready(function() {
+        $("#start-walking-button").on("click", function() {
+            console.log("walk triggered");
+            var anim = function() {
                 function Vector2(x, y) {
                     this.x = x;
                     this.y = y;
@@ -49,17 +46,47 @@
                 var c = document.getElementById("cvas");
                 var context = c.getContext("2d");
                 context.drawImage(img, 0, 0);
+
                 context.strokeStyle = "blue";
 
                 var idx = 1;
                 var pos = ROUTE[0];
                 var end = ROUTE[1];
                 var m = SLOPE(pos, end);
+                var s = setInterval(function() {
+                    var seconds = parseInt($("#map_time-sec").text());
+                    var minutes = parseInt($("#map_time-min").text());
+
+                    if (seconds + 1 >= 60)
+                    {
+                        if (minutes <= 9)
+                            minutes = "0" + (minutes+1);
+                        else
+                            minutes += 1
+
+                        $("#map_time-min").text(minutes);
+                        $("#map_time-sec").text("00");
+                    } else {
+                        if (seconds <= 9)
+                            seconds = "0" + (seconds+1);
+                        else
+                            seconds += 1;
+
+                        $("#map_time-sec").text(seconds);
+                    }
+                }, 1000);
+
+                var d = setInterval(function() {
+                    var t = $("#map-dist-mi").text();
+                    var n = parseFloat(t);
+                    $("#map-dist-mi").text((n+0.01).toFixed(2));
+                }, 750);
 
                 var i = setInterval(function() {
                     if (idx >= ROUTE.length)
                     {
                         clearInterval(i);
+                        clearInterval(s);
                         return;
                     } else {
                         context.rect(pos.x, pos.y, 2, 2);
@@ -67,21 +94,25 @@
                         pos.y -= m;
                         pos.x -= 1;
 
-                        console.log("drawing at", pos, end, "m=", m);
+                        // console.log("drawing at", pos, end, "m=", m);
 
                         if (pos.x == end.x && parseInt(pos.y) == end.y)
                         {
                             idx += 1;
                             pos = end;
                             end = ROUTE[idx];
-                            console.log("new point! from", pos, "to", end);
+                            // console.log("new point! from", pos, "to", end);
                             m = SLOPE(pos, end);
                         }
                     }
                 }, 100);
-            });
+            };
+            anim();
+        });
+        });
         </script>
     </head>
+
 
     <body>
 
@@ -89,35 +120,48 @@
             <img src="assets/img/Nexus5.png">
 
             <div id="screen-container">
-
                 <div id="status-bar"><img src="assets/img/StatusBar.png"></div>
 
+                <div id="editable-screen">
 
-                <div id="walk-editable-screen" style="display: none">
+                    <div class="before-start" id="before-start-cover">
+                        <div class="button" id="start-walking-button">
+                            <div id="start-walking-text">START WALKING</div>
+                        </div>
+                        <div class="button" id="find-buddy-button">
+                            <div id="find-buddy-text">FIND A BUDDY</div>
+                        </div>
+                    </div>
+
                     <div id="map_info">
-                        <div id="map_time"> 0:00:30 </div>
+                        <div id="map_time">
+                            <span id="map_time-hr">0</span>:<span id="map_time-min">00</span>:<span id="map_time-sec">30</span>
+                        </div>
                         <div class="button" id="map_camera-box">
                             <img src ="assets/img/Camera.png">
                             <!-- Icon made by [author link] from www.flaticon.com  -->
                         </div>
-                        <div id="map_dist"> 0.1 mi </div>
+                        <div id="map_dist">
+                            <span id="map-dist-mi">0.1</span>
+                            mi
+                        </div>
                     </div>
 
                     <div id="map_map-box">
                         <canvas id="cvas" width="363" height="573">
-                        </canvas>
-                        <img id="map-image" src="assets/img/Map.png">
+                        <img id="map-image" src="assets/img/Map.png"
+                             style="display: none;">
                     </div>
 
-                    <div class="button" id="map_stop">
-                        <p id="map_stop-text"> End Walk </p>
+                    <div class="button" id="end-button">
+                        <p id="end-button-text"> End Walk </p>
                     </div>
                 </div>
 
                 <div id="nav-bar">
-                    <div class="button" id="back-button"><img src="assets/img/BackArrow.png"></div>
-                    <div class="button" id="home-button"><img src="assets/img/House.png"></div>
-                    <div class="button" id="chat-button"><img src="assets/img/Chat.png"></div>
+                    <a href="index.html" class="button" id="back-button"><img src="assets/img/BackArrow.png"></a>
+                    <a href="index_onWalk.html" class="button" id="home-button"><img src="assets/img/House.png"></a>
+                    <a href="index_chat.html" class="button" id="chat-button"><img src="assets/img/Chat.png"></a>
                     <div class="button" id="stats-button"><img src="assets/img/Stats.png"></div>
                 </div>
 
