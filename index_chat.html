@@ -13,23 +13,7 @@
 
         <script>
             $(document).ready(function() {
-                $("#chat_reply").click(function() {
-                    if (!$("#chat_messages-container").hasClass("selected")) {
-                        $("#chat_messages-container").addClass("selected");
-                        $("#chat_messages-container").animate({top: "-=127px"});
-                        $("#chat_reply-container").animate({top: "-=275px"});
-                        $(".chat_row#first").fadeTo("fast", 0);
-                    }
-                });
-
-                $("#chat_messages-container").click(function() {
-                    if ($("#chat_messages-container").hasClass("selected")) {
-                        $("#chat_messages-container").removeClass("selected");
-                        $("#chat_messages-container").animate({top: "+=127px"});
-                        $("#chat_reply-container").animate({top: "+=275px"});
-                        $(".chat_row#first").css("zIndex", -1).fadeTo("fast", 1);
-                    }
-                });
+                $("#chat-editable-screen").show("slow");
             });
             </script>
     </head>
@@ -83,16 +67,11 @@
                         <div id="chat_reply-outer">
                             <input type="text" id="chat_reply" placeholder="Reply"/>
                         </div>
-                        <div id-"chat_keyboard">
+                        <div id="chat_keyboard">
                             <img src="assets/img/Keyboard.png">
                         </div>
                     </div>
-
-
-
-
                 </div>
-
 
                 <div id="nav-bar">
                     <div class="button" id="back-button"><img src="assets/img/BackArrow.png"></div>
