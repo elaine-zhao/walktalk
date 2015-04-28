@@ -12,17 +12,26 @@
         <script src="assets/js/script.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
-                $("#login-button").on("click", function() {
+                var walk = function() {
+                    window.location = "index_onWalk.html"
+                };
+
+                $("#home-button").on("click", function() {
+                    $("login-editable-screen").hide("slow", walk);
+                });
+
+                $("#chat-button").on("click", function() {
                     $("#login-editable-screen").hide("slow", function() {
-                        window.location = "index_onWalk.html"
-                    });/*.animate({
-                        "left": "-500px",
-                        "top": "-500px"
-                    }, {
-                        "duration": 500,
-                        "step": function() {
-                            console.log("stepping.");
-                        }
+                        window.location = "index_chat.html";
+                    });
+                });
+
+                $("#login-button").on("click", function() {
+                    $("#login-editable-screen").hide("slow", walk);
+                    /*.animate({
+                        "left": "-=500px",
+                        "top": "-=500px"
+
                     });*/
                 });
             });
@@ -57,7 +66,9 @@
                 <div id="nav-bar">
                     <div class="button" id="back-button"><img src="assets/img/BackArrow.png"></div>
                     <div class="button" id="home-button"><img src="assets/img/House.png"></div>
-                    <div class="button" id="chat-button"><img src="assets/img/Chat.png"></div>
+                    <div class="button" id="chat-button">
+                        <img src="assets/img/Chat.png">
+                    </div>
                     <div class="button" id="stats-button"><img src="assets/img/Stats.png"></div>
                 </div>
             </div>
