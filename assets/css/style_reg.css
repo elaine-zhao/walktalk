@@ -1,0 +1,41 @@
+h1 {
+    position: relative;
+    margin-left: 12.5%;
+    margin-top: 40px;
+    color: white;
+}
+
+.hline {
+    background: white no-repeat scroll center;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-bottom: 15px;
+    margin-top: -20px;
+    height: 1px;
+}
+
+.reg_page > .register_label {
+    position: relative;
+    text-align: center;
+    left: 12.5%;
+    color: white;
+    font-size: 14px;
+}
+
+.reg_page:first-child {
+    margin-top: 80px;
+}
+
+.register_input {
+    width: 75%;
+    position: relative;
+    margin: 0 auto;
+    padding: 5px 0 5px;
+    background: transparent;
+    font-size: 18px;
+    border: 2px solid white;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    color: white;
+}

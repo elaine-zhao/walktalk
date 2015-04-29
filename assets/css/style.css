@@ -72,6 +72,7 @@ input:focus::-webkit-input-placeholder {
 	top: 455px;
 }
 
+.form-button,
 #login-button {
 	position: absolute;
 	left: 50%;
@@ -86,6 +87,7 @@ input:focus::-webkit-input-placeholder {
 }
 
 
+.form-button-text,
 #login-text {
 	position: relative;
 	width: 122px;
@@ -99,10 +101,6 @@ input:focus::-webkit-input-placeholder {
 	height: 20px;
 	top: 406px;
 }
-
-
-
-
 
 /*MAP SCREEN*/
 
@@ -463,6 +461,10 @@ img {
 
 .button {
 	position: relative;
+}
+
+.form-button,
+.button {
 	margin: 0 auto;
 	cursor: pointer;
 	border-radius: 5px;
