@@ -39,3 +39,7 @@ h1 {
     text-align: center;
     color: white;
 }
+
+.register_input::-webkit-input-placeholder  {
+    color: white;
+}
