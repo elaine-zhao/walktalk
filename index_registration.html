@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Walk With Talk</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/style_reg.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+        </script>
+        <script src="assets/js/script.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".form-button").on("click", function() {
+                    $("#register-editable-screen").hide("slow");
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+
+        <div id="phone-container">
+            <img src="assets/img/Nexus5.png">
+            <div id="screen-container">
+                <div id="status-bar"><img src="assets/img/StatusBar.png"></div>
+
+                <div id="register-editable-screen">
+                    <h1>Registration</h1>
+                    <div class="hline"></div>
+
+                    <div class="reg_page">
+                        <label class="register_label">
+                            Username<br/>
+                            <input type="text" class="register_input"
+                                   id="reg_username"
+                                   placeholder="Choose a Username">
+                        </label>
+                        <br/>
+                        <label class="register_label">
+                            E-Mail<br/>
+                            <input type="email" class="register_input"
+                                   id="reg_email"
+                                   placeholder="Enter Your Email">
+                        </label>
+                        <br/>
+                        <label class="register_label">
+                            Password<br/>
+                            <input type="password" class="register_input"
+                                   id="reg_password"
+                                   placeholder="Choose a Password">
+                        </label>
+                        <br/>
+                        <label class="register_label">
+                            Confirm Password<br/>
+                            <input type="password" class="register_input"
+                                   id="reg_password-confirm"
+                                   placeholder="Confirm Your Password">
+                        </label>
+                        <br/>
+                        <label class="register_label">
+                            Select Your Age Range
+                            <select id="reg_age" class="register_input">
+                                <option>16-20</option>
+                                <option>21-25</option>
+                                <option>26-30</option>
+                                <option>31-35</option>
+                                <option>35+</option>
+                            </select>
+                        </label>
+                        <br/>
+                        <label class="register_label">
+                            Hobbies / Interests
+                            <textarea class="register_input"></textarea>
+                        </label><!--
+                        </br>
+                        <label class="register_label">
+                            Describe Yourself in 3 Words
+                            <input type="password" class="register_input"
+                                   id="reg_password-confirm"
+                                   placeholder="Word 1: Awesome!">
+                        </label> -->
+                    </div>
+
+                    <div class="form-button">
+                        <div class="form-button-text">REGISTER</div>
+                    </div>
+                </div>
+
+                <div id="nav-bar">
+                    <div class="button" id="back-button">
+                        <img src="assets/img/BackArrow.png">
+                    </div>
+                    <div class="button" id="home-button">
+                        <img src="assets/img/House.png">
+                    </div>
+                    <div class="button" id="chat-button">
+                        <img src="assets/img/Chat.png">
+                    </div>
+                    <div class="button" id="stats-button">
+                        <img src="assets/img/Stats.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
