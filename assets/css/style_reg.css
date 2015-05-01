@@ -43,3 +43,7 @@ h1 {
 .register_input::-webkit-input-placeholder  {
     color: white;
 }
+
+select, option {
+    background-color: #5BBDB0;
+}
