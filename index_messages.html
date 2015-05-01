@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Walk With Talk</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/style_msg.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+        </script>
+        <script src="assets/js/script.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".form-button:eq(1)").on("click", function() {
+                    $("#register-editable-screen").hide("slow", function() {
+                        window.location = "index_onWalk.html";
+                    });
+                });
+
+                $(".form-button").first().on("click", function() {
+                    $("#reg-page-1").hide("slow");
+                    $("#reg-page-2").show("slow");
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+
+    <div id="phone-container">
+        <img src="assets/img/Nexus5.png">
+        <div id="screen-container">
+            <div id="status-bar"><img src="assets/img/StatusBar.png"></div>
+
+            <div id="msg-editable-screen">
+                <div id="msg-topbar">
+                    Matches
+                </div>
+                <div id="msg-threads">
+                    <div class="msg-thread">
+                        <div class="msg-thread-pic"></div>
+                        <div class="msg-thread-user">Oski</div>
+                        <div class="msg-thread-preview">Do you like walking?</div>
+                    </div>
+                    <div class="msg-split"></div>
+                    <div class="msg-thread">
+                        <span class="msg-thread-pic"></span>
+                        <div class="msg-thread-user">Oski 2</div>
+                        <div class="msg-thread-preview">Do you like running?</div>
+                    </div>
+                    <div class="msg-split"></div>
+                    <div class="msg-thread">
+                        <span class="msg-thread-pic"></span>
+                        <div class="msg-thread-user">Oski 3</div>
+                        <div class="msg-thread-preview">
+                            Do you like eating instead of either?
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="nav-bar">
+                <div class="button" id="back-button">
+                    <img src="assets/img/BackArrow.png">
+                </div>
+                <div class="button" id="home-button">
+                    <img src="assets/img/House.png">
+                </div>
+                <div class="button" id="chat-button">
+                    <img src="assets/img/Chat.png">
+                </div>
+                <div class="button" id="stats-button">
+                    <img src="assets/img/Stats.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
+
+
