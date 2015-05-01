@@ -69,7 +69,10 @@
                     var minutes = parseInt($("#map_time-min").text());
 
                     if (seconds + 1 >= 60)
+                    {
+                        seconds = 0;
                         minutes += 1;
+                    }
                     else
                         seconds += 1;
 
