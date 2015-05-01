@@ -12,6 +12,18 @@
         <script src = "assets/js/script.js"></script>
         <script type="text/javascript">
         $(document).ready(function() {
+
+            var set_time = function(m, s) {
+                if (m <= 9)
+                    m = "0"+m;
+
+                if (s <= 9)
+                    s = "0" + (s+1);
+
+                $("#map_time-min").text(m);
+                $("#map_time-sec").text(s);
+            };
+
         $("#start-walking-button").on("click", function() {
             var anim = function() {
                 function Vector2(x, y) {
@@ -44,8 +56,8 @@
                 var img = document.getElementById("map-image");
                 var c = document.getElementById("cvas");
                 var context = c.getContext("2d");
-                context.drawImage(img, 0, 0);
 
+                context.drawImage(img, 0, 0);
                 context.strokeStyle = "blue";
 
                 var idx = 1;
@@ -57,22 +69,11 @@
                     var minutes = parseInt($("#map_time-min").text());
 
                     if (seconds + 1 >= 60)
-                    {
-                        if (minutes <= 9)
-                            minutes = "0" + (minutes+1);
-                        else
-                            minutes += 1
+                        minutes += 1;
+                    else
+                        seconds += 1;
 
-                        $("#map_time-min").text(minutes);
-                        $("#map_time-sec").text("00");
-                    } else {
-                        if (seconds <= 9)
-                            seconds = "0" + (seconds+1);
-                        else
-                            seconds += 1;
-
-                        $("#map_time-sec").text(seconds);
-                    }
+                    set_time(minutes, seconds);
                 }, 1000);
 
                 var d = setInterval(function() {
@@ -93,18 +94,23 @@
                         pos.y -= m;
                         pos.x -= 1;
 
-                        // console.log("drawing at", pos, end, "m=", m);
-
                         if (pos.x == end.x && parseInt(pos.y) == end.y)
                         {
                             idx += 1;
                             pos = end;
                             end = ROUTE[idx];
-                            // console.log("new point! from", pos, "to", end);
                             m = SLOPE(pos, end);
                         }
                     }
                 }, 100);
+
+                $("#end-button").on("click", function() {
+                    clearInterval(i);
+                    clearInterval(s);
+                    clearInterval(d);
+                    set_time(0, 30);
+                    $("#map-dist-mi").text("0.00");
+                });
             };
             anim();
         });
