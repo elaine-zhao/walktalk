@@ -227,30 +227,83 @@ input:focus::-webkit-input-placeholder {
 	left: 12px;
 }
 
+/*MATCHES SCREEN*/
+#matches-editable-screen {
+	background-color: white;
+}
 
+#matches-editable-screen .under-topbar-container {
+	top: 10px;
+}
+
+.matches-row div  {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.matches-row-pic {
+
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	object-fit: cover;
+	overflow: hidden;
+	float: left;
+	margin-right: 10px;
+}
+
+.matches-row-pic img {
+	width: 100%;
+	height: 75px;
+}
+
+#new-match {
+	border-style: solid;
+	border-color: #19A3FF;
+}
+
+#matches-rows {
+    background-color: white;
+    height: 500px;
+    padding-top: 50px;
+}
+
+.matches-row {
+    padding-left: 20px;
+    height: 80px;
+}
+
+.matches-row-text {
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.matches-row-user {
+	top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.matches-row-preview {
+    color: gray;
+    font-size: 12px;
+}
+
+.matches-split {
+    background: gray no-repeat scroll center;
+    margin: 10px 12.5% 10px;
+    height: 1px;
+    width: 75%;
+}
 
 /*CHAT SCREEN*/
-#chat_top-bar {
-    height: 50px;
-    background-color: #5BBDB0;
-}
-
-
-
-#chat_top-bar-text {
-    text-align: center;
-    top: 8px;
-    position: relative;
-    font-size: 25px;
-    color: white;
-
-}
-
-#chat_messages-container {
-	position: relative;
-	height: calc(100% - 50px);
-
-}
 
 .chat_row {
 	position: relative;
@@ -398,6 +451,24 @@ should be same between all screens*/
 	position: absolute;
 	width: 364px;
 	height: 24px;
+}
+
+#top-bar {
+    height: 50px;
+    background-color: #5BBDB0;
+}
+
+#top-bar-text {
+    text-align: center;
+    top: 8px;
+    position: relative;
+    font-size: 25px;
+    color: white;
+}
+
+.under-topbar-container {
+	position: relative;
+	height: calc(100% - 50px);
 }
 
 .screen,

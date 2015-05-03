@@ -10,18 +10,18 @@ $(document).ready(function() {
     // Chat screen animations, fading the keyboard in and out.
 
     $("#chat_reply").click(function() {
-        if (!$("#chat_messages-container").hasClass("selected")) {
-            $("#chat_messages-container").addClass("selected");
-            $("#chat_messages-container").animate({top: "-=127px"});
+        if (!$("chat_messages").hasClass("selected")) {
+            $("#under-topbar-container").addClass("selected");
+            $("#under-topbar-container").animate({top: "-=127px"});
             $("#chat_reply-container").animate({top: "-=275px"});
             $(".chat_row#first").fadeTo("fast", 0);
         }
     });
 
-    $("#chat_messages-container").click(function() {
-        if ($("#chat_messages-container").hasClass("selected")) {
-            $("#chat_messages-container").removeClass("selected");
-            $("#chat_messages-container").animate({top: "+=127px"});
+    $("#under-topbar-container").click(function() {
+        if ($("#under-topbar-container").hasClass("selected")) {
+            $("#under-topbar-container").removeClass("selected");
+            $("#under-topbar-container").animate({top: "+=127px"});
             $("#chat_reply-container").animate({top: "+=275px"});
             $(".chat_row#first").css("zIndex", -1).fadeTo("fast", 1);
         }
