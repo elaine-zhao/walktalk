@@ -13,15 +13,15 @@
         <script src="assets/js/script.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
-                $(".form-button:eq(1)").on("click", function() {
-                    $("#register-editable-screen").hide("slow", function() {
-                        window.location = "index_onWalk.html";
+                $("#to-new-msg").on("click", function() {
+                    $("#matches-editable-screen").hide("slow", function() {
+                        window.location = "index_chat_empty.html";
                     });
                 });
-
-                $(".form-button").first().on("click", function() {
-                    $("#reg-page-1").hide("slow");
-                    $("#reg-page-2").show("slow");
+                $("#to-oski-msg").on("click", function() {
+                    $("#matches-editable-screen").hide("slow", function() {
+                        window.location = "index_chat.html";
+                    });
                 });
             });
         </script>
@@ -40,22 +40,22 @@
                 </div>
 
                 <div class="under-topbar-container">
-                    <div class="matches-row">
+                    <div class="matches-row" id="to-new-msg">
                         <div class="matches-row-pic" id="new-match">
                             <img src="assets/img/Oski2.jpg">
                         </div>
                         <div class="matches-row-text">
-                            <div class="matches-row-user">Oski3</div>
+                            <div class="matches-row-user">Oski Bear III</div>
                             <div class="matches-row-preview"></div>
                         </div>
                     </div>
                     <div class="matches-split"></div>
-                    <div class="matches-row">
+                    <div class="matches-row" id="to-oski-msg">
                         <div class="matches-row-pic">
                             <img src="assets/img/Oski.jpg">
                         </div>
                         <div class="matches-row-text">
-                            <div class="matches-row-user">Oski</div>
+                            <div class="matches-row-user">Oski Bear</div>
                             <div class="matches-row-preview">Works for me.
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                             <img src="assets/img/Oski3.jpg">
                         </div>
                         <div class="matches-row-text">
-                            <div class="matches-row-user">Oski2</div>
+                            <div class="matches-row-user">Oski Bear II</div>
                             <div class="matches-row-preview">Do you like walking?</div>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
             <div id="nav-bar">
                 <a href="index.html" class="button" id="back-button"><img src="assets/img/BackArrow.png"></a>
                 <a href="index_onWalk.html" class="button" id="home-button"><img src="assets/img/House.png"></a>
-                <a href="index_chat.html" class="button" id="chat-button"><img src="assets/img/Chat.png"></a>
+                <a href="index_matches.html" class="button" id="chat-button"><img src="assets/img/Chat.png"></a>
                 <a href="index_stats.html" class="button" id="stats-button"><img src="assets/img/Stats.png"></a>
             </div>
         </div>

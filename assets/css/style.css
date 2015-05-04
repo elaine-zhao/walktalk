@@ -316,6 +316,7 @@ form input {
 	-moz-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
+	cursor: pointer;
 }
 
 .matches-row-pic {
@@ -482,9 +483,6 @@ form input {
 
 
 
-
-
-
 /*stuff below is about positioning phone and screen, default button behavior, etc
 should be same between all screens*/
 
@@ -626,6 +624,7 @@ img {
 
 a {
     text-decoration: none;
+    cursor: pointer;
     display: block;
     margin: 0 auto;
     width: 180px;

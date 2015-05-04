@@ -11,6 +11,15 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
         </script>
         <script src="assets/js/script.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#to-oski2-msg").first().on("click", function() {
+                    $("#stats-container").hide("slow", function() {
+                        window.location = "index_chat.html";
+                    });
+                });
+            });
+        </script>
     </head>
 
     <body>
@@ -27,21 +36,31 @@
 
                 <div id="stats-container">
                     <div class="stat-block">
-                        <div class="stat-partner stat-button">
-                            Walk Again<br>With Oski
+                        <div class="stat-partner stat-button" id="to-oski2-msg">
+                            <div id="stat-button-text">
+                                Request another<br> walk
+                            </div>
                         </div>
-                        <div class="stat-date">Monday, May 20th</div>
-                        <div class="stat-walktime">14m 10s</div>
-                        <div class="stat-distance">2.1 mi</div>
+                        <div class="left-text">
+                            <div class="stat-date">Monday, May 20th</div>
+                            <div class="stat-walktime">14m 10s</div>
+                            <div class="stat-distance">2.1 mi</div>
+                            <div class="stat-partner">with Oski Bear II</div>
+                        </div>
                     </div>
                     <div class="stat-split"></div>
                     <div class="stat-block">
                         <div class="stat-partner stat-button">
-                            Walk Again<br>With Elaine
+                            <div id="stat-button-text">
+                                Request another<br> walk
+                            </div>
                         </div>
-                        <div class="stat-date">Wednesday, April 14th</div>
-                        <div class="stat-walktime">8m 27s</div>
-                        <div class="stat-distance">1.3 mi</div>
+                        <div class="left-text">
+                            <div class="stat-date">Wednesday, April 14th</div>
+                            <div class="stat-walktime">8m 27s</div>
+                            <div class="stat-distance">1.3 mi</div>
+                            <div class="stat-partner">with Oski Bear</div>
+                        </div>
                     </div>
                     <div class="stat-split"></div>
                     <div style="height: 400px; background-color: white;">
@@ -52,7 +71,7 @@
             <div id="nav-bar">
                 <a href="index.html" class="button" id="back-button"><img src="assets/img/BackArrow.png"></a>
                 <a href="index_onWalk.html" class="button" id="home-button"><img src="assets/img/House.png"></a>
-                <a href="index_chat.html" class="button" id="chat-button"><img src="assets/img/Chat.png"></a>
+                <a href="index_matches.html" class="button" id="chat-button"><img src="assets/img/Chat.png"></a>
                 <a href="index_stats.html" class="button" id="stats-button"><img src="assets/img/Stats.png"></a>
             </div>
         </div>

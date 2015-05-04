@@ -5,34 +5,49 @@
 
 .stat-block {
     padding-left: 20px;
-    /*height: 55px;*/
+    height: 100px;
+}
+
+.left-text {
+    position: relative;
+/*    top: 50%;*/
+    transform: translateY(15%);
+    display: inline-block;
+    left: -75px;
+}
+
+.stat-date {
+    font-weight: bold;
 }
 
 .stat-walktime {
-    font-weight: bold;
-    font-size: 18px;
     margin-right: 15px;
 }
 
-.stat-distance {
-    font-weight: bold;
-    font-size: 18px;
-}
 
 .stat-partner {
-    float: right;
-    color: gray;
+    color: black;
 }
 
 .stat-button {
+    display: inline-block;
     position: relative;
-    border-radius: 3px;
+    top: -5px;
+    width: 75px;
+    height: 75px;
+    left: 230px;
+    border-radius: 50%;
     background-color: #FFD07B;
     color: black;
     margin-right: 15px;
-    margin-top: 6px;
     padding: 5px;
     text-align: center;
+    cursor: pointer;
+}
+
+#stat-button-text {
+    position: relative;
+    top: 10px;
 }
 
 .stat-split {
@@ -40,4 +55,7 @@
     margin: 10px 12.5% 10px;
     height: 1px;
     width: 75%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
