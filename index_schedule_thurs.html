@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Walk With Talk</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+		</script>
+		<script src = "assets/js/script.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				$("#chat_editable-screen").show("slow");
+			});
+			</script>
+	</head>
+
+
+	<body>
+
+	<div id="phone-container">
+		<img src="assets/img/Nexus5.png">
+		<div id="screen-container-white">
+			<div id="status-bar"><img src="assets/img/StatusBar.png"></div>
+
+			<div class="screen" id="chat_editable-screen">
+				<div id="top-bar">
+					<div id="top-bar-text">Schedule</div>
+				</div>
+
+				<div class="under-topbar-container">
+					<div class="weekday" id="thurs">Thursday Available Times</div>
+					<div id="times-container">
+						<form action="time-slots" id="left">
+							<input type="checkbox" name="time" value="5">5-6am<br>
+							<input type="checkbox" name="time" value="6">6-7am<br>
+							<input type="checkbox" name="time" value="7">7-8am<br>
+							<input type="checkbox" name="time" value="8">8-9am<br>
+							<input type="checkbox" name="time" value="9">9-10am<br>
+							<input type="checkbox" name="time" value="5">10-11am<br>
+							<input type="checkbox" name="time" value="6">11-12pm<br>
+							<input type="checkbox" name="time" value="7">12-1pm<br>
+							<input type="checkbox" name="time" value="8">1-2pm<br>
+							<input type="checkbox" name="time" value="9">2-3pm<br>
+						</form>
+
+						<form action="time-slots" id="right">
+							
+							<input type="checkbox" name="time" value="5">3-4pm<br>
+							<input type="checkbox" name="time" value="6">4-5pm<br>
+							<input type="checkbox" name="time" value="7">5-6pm<br>
+							<input type="checkbox" name="time" value="8">6-7pm<br>
+							<input type="checkbox" name="time" value="9">7-8pm<br>
+							<input type="checkbox" name="time" value="5">8-9pm<br>
+							<input type="checkbox" name="time" value="6">9-10pm<br>
+							<input type="checkbox" name="time" value="7">10-11pm<br>
+							<input type="checkbox" name="time" value="8">11-12am<br>
+						</form>
+
+						<a href="index_schedule_fri.html" class="next-button" class="button">
+							<div id="next-text">Next</div>
+						</a>
+					</div>
+				</div>
+
+				
+			</div>
+
+			<div id="nav-bar">
+				<a href="index.html" class="button" id="back-button"><img src="assets/img/BackArrow.png"></a>
+				<a href="index_onWalk.html" class="button" id="home-button"><img src="assets/img/House.png"></a>
+				<a href="index_chat.html" class="button" id="chat-button"><img src="assets/img/Chat.png"></a>
+				<div class="button" id="stats-button"><img src="assets/img/Stats.png"></div>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
+
+

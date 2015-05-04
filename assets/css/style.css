@@ -112,6 +112,74 @@ input:focus::-webkit-input-placeholder {
 	transform: translateX(-50%);
 }
 
+/*SCHEDULE SCREEN*/
+.weekday {
+	position: relative;
+	width: 248px;
+	margin: 0 auto;
+	font-size: 23px;
+	top:20px;
+}
+
+form {
+	position: relative;
+	width: 130px;
+	left: 60px;
+	top: 25px;
+}
+
+form input {
+	display: inline-block;
+	margin-bottom: 15px;
+	margin-top:15px;
+}
+
+#right {
+	position: relative;
+	right: 150px;
+	margin: 0 auto;
+	left: 95px;
+	top: -404px;
+}
+
+.next-button {
+	position: absolute;
+	left: 215px;
+	top: 450px;
+	width: 100px;
+	height: 30px;
+	background-color: #FFD07B;
+	border-radius: 5px;
+}
+
+#next-text {
+	width: 40px;
+	margin: 0 auto;
+	padding-top: 5px;
+	color: white;
+}
+
+#wed {
+	width: 290px;
+}
+
+#thurs {
+	width: 265px;
+}
+
+#fri {
+	width: 230px;
+}
+
+#sat {
+	width: 255px;
+}
+
+#sun {
+	width: 240px;
+}
+
+
 /*MAP SCREEN*/
 
 .before-start {
@@ -485,7 +553,7 @@ should be same between all screens*/
 	width: 363px;
 	height: 60px;
 	top: 584px;
-	background-color: #189786
+	background-color: #189786;
 }
 
 #back-button {
