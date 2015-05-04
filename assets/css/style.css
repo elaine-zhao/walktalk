@@ -147,6 +147,7 @@ form input {
 }
 
 .next-button {
+	cursor: pointer;
 	position: absolute;
 	left: 210px;
 	top: 380px;
