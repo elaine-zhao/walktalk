@@ -18,6 +18,11 @@
                         window.location = "index_chat.html";
                     });
                 });
+                $("#to-oski-msg").first().on("click", function() {
+                    $("#stats-container").hide("slow", function() {
+                        window.location = "index_chat.html";
+                    });
+                });
             });
         </script>
     </head>
@@ -50,7 +55,7 @@
                     </div>
                     <div class="stat-split"></div>
                     <div class="stat-block">
-                        <div class="stat-partner stat-button">
+                        <div class="stat-partner stat-button" id="to-oski-msg">
                             <div id="stat-button-text">
                                 Request another<br> walk
                             </div>

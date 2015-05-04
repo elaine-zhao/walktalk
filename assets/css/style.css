@@ -327,6 +327,7 @@ form input {
 	object-fit: cover;
 	overflow: hidden;
 	float: left;
+	left: 10px;
 	margin-right: 10px;
 }
 
@@ -337,6 +338,7 @@ form input {
 
 #new-match {
 	border-style: solid;
+	border-width: 3px;
 	border-color: #19A3FF;
 }
 
@@ -348,10 +350,11 @@ form input {
 
 .matches-row {
     padding-left: 20px;
-    height: 80px;
+    height: 90px;
 }
 
 .matches-row-text {
+	left: 30px;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
@@ -371,6 +374,7 @@ form input {
 }
 
 .matches-split {
+	position: relative;
     background: gray no-repeat scroll center;
     margin: 10px 12.5% 10px;
     height: 1px;

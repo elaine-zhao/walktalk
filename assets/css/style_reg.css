@@ -47,3 +47,7 @@ h1 {
 select, option {
     background-color: #5BBDB0;
 }
+
+.reg_page *{
+    margin-bottom: 20px;
+}
