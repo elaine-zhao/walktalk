@@ -121,11 +121,15 @@ input:focus::-webkit-input-placeholder {
 	top:20px;
 }
 
+#times-container {
+	position: relative;
+	top: 35px;
+}
+
 form {
 	position: relative;
 	width: 130px;
 	left: 60px;
-	top: 25px;
 }
 
 form input {
@@ -135,17 +139,17 @@ form input {
 }
 
 #right {
-	position: relative;
+	position: absolute;
 	right: 150px;
 	margin: 0 auto;
-	left: 95px;
-	top: -404px;
+	left: 210px;
+	top: 0px;
 }
 
 .next-button {
 	position: absolute;
-	left: 215px;
-	top: 450px;
+	left: 210px;
+	top: 380px;
 	width: 100px;
 	height: 30px;
 	background-color: #FFD07B;
