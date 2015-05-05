@@ -18,7 +18,7 @@ $(document).ready(function() {
         }
     });
 
-    $("#under-topbar-container").click(function() {
+    $(".under-topbar-container").click(function() {
         if ($(".under-topbar-container").hasClass("selected")) {
             $(".under-topbar-container").removeClass("selected");
             $(".under-topbar-container").animate({top: "+=127px"});
