@@ -580,62 +580,51 @@ should be same between all screens*/
 
 #home-button {
 	position: absolute;
-	width: 34px;
+	width: 35px;
 	height: 28.5px;
-	top: 50%;
+	top: 46%;
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
-	left: 20px;
+	left: 25px;
 }
 
-/*#home-button {
-	position: absolute;
-	width: 34px;
-	height: 28.5px;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-	transform: translateY(-50%);
-	left: 110px;
-}*/
 
 #chat-button {
 	position: absolute;
 	width: 32px;
 	height: 30px;
-	top: 50%;
+	top: 47%;
 	-webkit-transform: translateY(-35%);
 	-moz-transform: translateY(-35%);
 	-o-transform: translateY(-35%);
 	transform: translateY(-35%);
-	left: 115px;
+	left: 120px;
 }
 
 #stats-button {
 	position: absolute;
-	width: 32px;
-	height: 32px;
+	width: 30px;
+	height: 30px;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
-	left: 215px;
+	left: 220px;
 }
 
 #logout-button {
 	position: absolute;
-	width: 32px;
-	height: 32px;
-	top: 50%;
+	width: 25px;
+	height: 25px;
+	top: 48%;
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
-	left: 300px;
+	left: 310px;
 }
 
 img {
