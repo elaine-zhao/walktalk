@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Walk With Talk</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+		</script>
+		<script src = "assets/js/script.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				$("#chat_editable-screen").show("slow");
+			});
+			</script>
+	</head>
+
+
+	<body>
+
+	<div id="phone-container">
+		<img src="assets/img/Nexus5.png">
+		<div id="screen-container-white">
+			<div id="status-bar"><img src="assets/img/StatusBar.png"></div>
+
+			<div class="screen" id="chat_editable-screen">
+				<div id="top-bar">
+					<div id="top-bar-text">Chat with Oski Bear II</div>
+				</div>
+
+				<div class="under-topbar-container">
+					<div class="chat_row" id="first">
+						<div class="chat_picture" id="oski2pic">
+							<img src="assets/img/Oski3.jpg">
+						</div>
+						<div class="chat_message" id="first">
+							<div class="chat_message-text" id="oski2text">See you in an hour!
+							</div>
+						</div>
+					</div>
+
+					<div class="chat_row" id="second">
+						<div class="chat_picture" id="second">
+							<img src="assets/img/elainezhao1.jpg">
+						</div>
+						<div class="chat_message" id="second">
+							<div class="chat_message-text" id="second">That was a great one. Loved discussing books!
+							</div>
+						</div>
+					</div>
+
+					<div class="chat_row" id="third">
+						<div class="chat_picture" id="oski2pic">
+							<img src="assets/img/Oski3.jpg">
+						</div>
+						<div class="chat_message" id="third">
+							<div class="chat_message-text" id="third">Wait random question, but do you actually like walking?
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div id="chat_reply-container">
+					<div id="chat_reply-outer">
+						<input type="text" id="chat_reply" placeholder="Reply"/>
+					</div>
+					<div id="chat_keyboard">
+						<img src="assets/img/Keyboard.png">
+					</div>
+				</div>
+			</div>
+
+			<div id="nav-bar">
+				<a href="index.html" class="button" id="back-button"><img src="assets/img/BackArrow.png"></a>
+				<a href="index_onWalk.html" class="button" id="home-button"><img src="assets/img/House.png"></a>
+				<a href="index_matches.html" class="button" id="chat-button"><img src="assets/img/Chat.png"></a>
+				<a href="index_stats.html" class="button" id="stats-button"><img src="assets/img/Stats.png"></a>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
+
+

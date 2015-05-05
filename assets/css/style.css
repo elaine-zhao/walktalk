@@ -82,7 +82,7 @@ input:focus::-webkit-input-placeholder {
 	transform: translateX(-50%);
 	width: 122px;
 	height: 35px;
-	top: 485px;
+	top: 480px;
 	background-color: white;
 }
 
@@ -104,7 +104,7 @@ input:focus::-webkit-input-placeholder {
 	top: 395px;
 	color: white;
 	font-size: 13px;
-	top: 540px;
+	top: 530px;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
@@ -337,9 +337,15 @@ form input {
 }
 
 #new-match {
+	width: 72px;
+	height: 72px;
 	border-style: solid;
-	border-width: 3px;
-	border-color: #19A3FF;
+	border-width: 4px;
+	border-color: #FFD07B;
+}
+
+#new-match-text {
+	color: #FFD07B;
 }
 
 #matches-rows {
@@ -411,6 +417,15 @@ form input {
 
 #first img, #third img{
 	width: 140%;
+}
+
+#oski2pic img{
+	width: 75px;
+	height: 75px;
+}
+
+#oski2text {
+	left: 20px;
 }
 
 .chat_message{
@@ -563,18 +578,6 @@ should be same between all screens*/
 	background-color: #189786;
 }
 
-#back-button {
-	position: absolute;
-	width: 20px;
-	height: 31.5px;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-	transform: translateY(-50%);
-	left: 15px;
-}
-
 #home-button {
 	position: absolute;
 	width: 34px;
@@ -584,8 +587,20 @@ should be same between all screens*/
 	-moz-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
-	left: 110px;
+	left: 20px;
 }
+
+/*#home-button {
+	position: absolute;
+	width: 34px;
+	height: 28.5px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 110px;
+}*/
 
 #chat-button {
 	position: absolute;
@@ -596,7 +611,7 @@ should be same between all screens*/
 	-moz-transform: translateY(-35%);
 	-o-transform: translateY(-35%);
 	transform: translateY(-35%);
-	left: 215px;
+	left: 115px;
 }
 
 #stats-button {
@@ -608,7 +623,19 @@ should be same between all screens*/
 	-moz-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
-	left: 310px;
+	left: 215px;
+}
+
+#logout-button {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 300px;
 }
 
 img {

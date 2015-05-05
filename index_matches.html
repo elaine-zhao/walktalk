@@ -14,13 +14,20 @@
         <script type="text/javascript">
             $(document).ready(function() {
                 $("#to-new-msg").on("click", function() {
-                    $("#matches-editable-screen").hide("slow", function() {
+                    $(".under-topbar-container").hide("slow", function() {
                         window.location = "index_chat_empty.html";
                     });
                 });
+
                 $("#to-oski-msg").on("click", function() {
-                    $("#matches-editable-screen").hide("slow", function() {
-                        window.location = "index_chat.html";
+                    $(".under-topbar-container").hide("slow", function() {
+                        window.location = "index_chat_oski.html";
+                    });
+                });
+
+                $("#to-oski2-msg").on("click", function() {
+                    $(".under-topbar-container").hide("slow", function() {
+                        window.location = "index_chat_oski2.html";
                     });
                 });
             });
@@ -46,7 +53,7 @@
                         </div>
                         <div class="matches-row-text">
                             <div class="matches-row-user">Oski Bear III</div>
-                            <div class="matches-row-preview">New match! Start a conversation?</div>
+                            <div class="matches-row-preview" id="new-match-text">New match! Start a conversation?</div>
                         </div>
                     </div>
                     <div class="matches-split"></div>
@@ -61,7 +68,7 @@
                         </div>
                     </div>
                     <div class="matches-split"></div>
-                    <div class="matches-row">
+                    <div class="matches-row" id="to-oski2-msg">
                         <div class="matches-row-pic">
                             <img src="assets/img/Oski3.jpg">
                         </div>
